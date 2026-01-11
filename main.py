@@ -25,5 +25,15 @@ while True:
     else:
         print("Вы угадали, поздравляем!")
         print("Количество сделанных вами попыток:", tries)
+
+        print("Желаете сыграть еще раз? (да/нет):", end='\n')
+        answ = input()
+        if answ == "да" or answ == "Да" or answ == "ДА":
+            continue
+        elif answ == "нет" or answ == "Нет" or answ == "НЕТ":
+            print("Спасибо за игру! До свидания!")
+            break
+        else:
+            print('Введите "да" иил "нет"')
         break
  
