@@ -8,6 +8,7 @@ def is_valid_num(n):
 
 num = random.randint(1, 100)
 print("Добро пожаловать в числовую угадайку!")
+tries = 0
 
 while True:
     print("Введите число от 1 до 100:", end=" ")
@@ -17,9 +18,12 @@ while True:
         print("Число должно быть от 1 до 100. Попробуйте еще раз.")
     elif users_num < num:
         print("Ваше число меньше загаданного, попробуйте еще разок.")
+        tries += 1
     elif users_num > num:
         print("Ваше число больше загаданного, попробуйте еще разок.")
+        tries += 1
     else:
         print("Вы угадали, поздравляем!")
+        print("Количество сделанных вами попыток:", tries)
         break
  
